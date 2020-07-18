@@ -1,0 +1,59 @@
+.sections
+;name	type	size
+textsec	text	203
+datasec	data	22
+.symbols
+;symbol	section	offset	type
+extdat2		0	E
+extdat1		0	E
+ext2		0	E
+textsec	textsec	0	S
+start	textsec	0	G
+datasec	datasec	0	S
+ext1		0	E
+.rel.textsec
+;symbol	offset	type
+extdat2	   149	abs16
+extdat2	   159	rel16
+extdat2	   169	rel16
+extdat1	   144	abs16
+extdat1	   154	rel16
+extdat1	   164	rel16
+textsec	   179	abs16
+textsec	   189	rel16
+textsec	   199	rel16
+ext2	    30	rel16
+ext2	    50	abs16
+textsec	    26	rel16
+textsec	    38	abs16
+textsec	   174	abs16
+textsec	   184	rel16
+textsec	   194	rel16
+datasec	    54	abs16
+datasec	    74	abs16
+datasec	    79	abs16
+datasec	    84	abs16
+datasec	    89	rel16
+datasec	    94	rel16
+datasec	    99	rel16
+textsec	    34	rel16
+textsec	    46	abs16
+ext1	    22	rel16
+ext1	    42	abs16
+.textsec
+3c 6e f6 ff 3c 6e 0a 00 3c 6e 0a 00 3c 00 0a 00 
+3c 00 0a 00 3c 6e 00 00 3c 6e f8 ff 3c 6e 00 00 
+3c 6e 10 00 3c 00 14 00 3c 00 00 00 3c 00 34 00 
+3c 00 00 00 64 00 0a 00 20 64 60 fc ff 22 64 60 
+00 00 22 64 60 04 00 22 64 60 04 00 22 64 60 0a 
+00 22 64 60 10 00 22 64 6e 00 00 22 64 6e 00 00 
+22 64 6e 00 00 22 64 60 f6 ff 22 64 60 0a 00 22 
+64 6e 82 ff 22 64 6e 91 ff 22 64 60 f6 ff 22 64 
+60 0a 00 22 64 6e 00 00 22 64 6e 00 00 22 64 60 
+00 00 22 64 60 00 00 22 64 6e 00 00 22 64 6e 00 
+00 22 64 6e 00 00 22 64 6e 00 00 22 64 60 8e 00 
+22 64 60 ca 00 22 64 6e d4 ff 22 64 6e 0b 00 22 
+64 6e ca ff 22 64 6e 01 00 22 04 
+.datasec
+fb ff fc ff fd ff fe ff ff ff 00 00 01 00 02 00 
+03 00 04 00 05 00 

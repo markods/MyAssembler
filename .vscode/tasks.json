@@ -1,0 +1,57 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "assembler - build all files",
+            "command": "/usr/bin/g++",
+            "args": [
+                // compiler options
+                "-g", "-Wall", "-Wextra", "-Wpedantic",
+                // compile all .cpp files in the assembler folder recursively
+                "$(find", "\"${workspaceFolder}/source/assembler\"", "-type", "f", "-iregex", "'.*\\.cpp'", "-exec", "echo", "-n", "'{} '", "\\;)",
+                // include the assembler folder and all folders in it recursively
+                "-I\"${workspaceFolder}/source/assembler/\"",
+                "$(find", "\"${workspaceFolder}/source/assembler\"", "-type", "d",                          "-exec", "echo", "-n", "-I'\"{}\" '", "\\;)",
+                // link the object files into assembler.exe
+                "-o", "\"${workspaceFolder}/bin/assembler.exe\"",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+            },
+            "problemMatcher": [
+                "$gcc",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true,
+            }
+        },
+        {
+            "type": "shell",
+            "label": "emulator - build all files",
+            "command": "/usr/bin/g++",
+            "args": [
+                // compiler options
+                "-g", "-Wall", "-Wextra", "-Wpedantic",
+                // compile all .cpp files in the emulator folder recursively
+                "$(find", "\"${workspaceFolder}/source/emulator\"", "-type", "f", "-iregex", "'.*\\.cpp'", "-exec", "echo", "-n", "'{} '", "\\;)",
+                // include the emulator folder and all folders in it recursively
+                "-I\"${workspaceFolder}/source/emulator/\"",
+                "$(find", "\"${workspaceFolder}/source/emulator\"", "-type", "d",                          "-exec", "echo", "-n", "-I'\"{}\" '", "\\;)",
+                // link the object files into emulator.exe
+                "-o", "\"${workspaceFolder}/bin/emulator.exe\"",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+            },
+            "problemMatcher": [
+                "$gcc",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true,
+            }
+        },
+    ],
+    "version": "2.0.0",
+}

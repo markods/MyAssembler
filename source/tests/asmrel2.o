@@ -1,0 +1,19 @@
+.sections
+;name	type	size
+textsec	text	31
+datasec	data	22
+.symbols
+;symbol	section	offset	type
+textsec	textsec	0	S
+start	textsec	0	G
+datasec	datasec	0	S
+ext1		0	E
+.rel.textsec
+;symbol	offset	type
+datasec	     2	abs16
+.textsec
+64 00 0a 00 20 64 60 02 00 22 6c 60 04 00 22 6c 
+60 06 00 22 6c 60 08 00 22 6c 60 0a 00 22 04 
+.datasec
+fb ff fc ff fd ff fe ff ff ff 00 00 01 00 02 00 
+03 00 04 00 05 00 

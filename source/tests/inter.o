@@ -1,0 +1,32 @@
+.sections
+;name	type	size
+textsec	text	117
+ivt	data	30
+.symbols
+;symbol	section	offset	type
+textsec	textsec	0	S
+start	textsec	0	G
+ivt	ivt	0	S
+.rel.textsec
+;symbol	offset	type
+textsec	    12	abs16
+textsec	    43	abs16
+ivt	    20	abs16
+ivt	    25	abs16
+.rel.ivt
+;symbol	offset	type
+textsec	     6	abs16
+textsec	     2	abs16
+textsec	     4	abs16
+.textsec
+64 00 11 22 20 64 20 80 a0 0f 2c 00 0a 00 04 ac 
+20 20 60 80 10 00 22 60 60 11 00 24 64 24 80 00 
+ff 6c 00 01 00 20 8c 20 22 3c 00 17 00 04 9c 00 
+00 00 20 64 80 10 ff 20 6c 00 01 00 20 64 20 80 
+10 ff 8c 20 00 06 00 34 00 cc cc 6c 00 60 00 20 
+64 20 80 00 ff 64 00 0a 00 20 64 20 80 00 ff 0c 
+64 00 00 00 20 a4 00 00 00 20 60 80 02 ff 20 60 
+20 80 00 ff 0c 
+.ivt
+00 00 0f 00 2e 00 60 00 00 00 00 00 00 00 00 00 
+06 65 72 72 6f 72 0a 00 00 00 00 00 00 00 

@@ -1,0 +1,65 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "assembler - build and debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/assembler.exe",
+                    // create object file from assembly file
+            // "args": ["-o", "./source/tests/asm.o",     "./source/tests/asm.s"    ],
+            // "args": ["-o", "./source/tests/asm1.o",    "./source/tests/asm1.s"   ],
+            // "args": ["-o", "./source/tests/asm2.o",    "./source/tests/asm2.s"   ],
+            // "args": ["-o", "./source/tests/asmrel.o",  "./source/tests/asmrel.s" ],
+            // "args": ["-o", "./source/tests/asmrel2.o", "./source/tests/asmrel2.s"],
+            // "args": ["-o", "./source/tests/p_funs.o",  "./source/tests/p_funs.s" ],
+            // "args": ["-o", "./source/tests/p_ints.o",  "./source/tests/p_ints.s" ],
+            // "args": ["-o", "./source/tests/p_main.o",  "./source/tests/p_main.s" ],
+            "args": ["-o", "./source/tests/inter.o",   "./source/tests/inter.s"  ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "assembler - build all files",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "emulator - build and debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/emulator.exe",
+                    // link and load given object files into emulator
+            // "args": ["./source/tests/asm.o"],
+            // "args": ["./source/tests/asm1.o",     "./source/tests/asm2.o",                                                     "-place=textsec@0x0100"],
+            // "args": ["./source/tests/asmrel.o"],
+            // "args": ["./source/tests/asmrel2.o"],
+            // "args": ["./source/tests/p_main.o",   "./source/tests/p_funs.o", "./source/tests/p_ints.o",   "-place=ivt@0x0000"],
+            "args": ["./source/tests/inter.o",                                                            "-place=ivt@0x0000"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "emulator - build all files",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+    ]
+}

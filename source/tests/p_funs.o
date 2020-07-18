@@ -1,0 +1,42 @@
+.sections
+;name	type	size
+fdata	data	24
+functions	text	117
+.symbols
+;symbol	section	offset	type
+res		0	E
+sumarray	functions	0	G
+multiply	functions	73	G
+fdata	fdata	0	S
+mularray	functions	47	G
+divide	functions	84	G
+increase	functions	95	G
+functions	functions	0	S
+decrease	functions	106	G
+.rel.functions
+;symbol	offset	type
+res	    44	abs16
+res	    70	abs16
+res	    81	abs16
+res	    92	abs16
+res	   103	abs16
+res	   114	abs16
+fdata	     2	abs16
+fdata	    12	abs16
+fdata	    49	abs16
+fdata	    64	abs16
+fdata	    75	abs16
+fdata	    86	abs16
+functions	    39	abs16
+.functions
+64 00 04 00 22 64 00 00 00 24 64 80 0e 00 26 6c 
+42 24 1c 00 05 00 6c 00 02 00 22 74 00 01 00 26 
+8c 26 00 00 00 3c 00 0f 00 64 24 80 00 00 14 64 
+00 10 00 20 7c 60 02 00 24 7c 60 04 00 24 7c 80 
+16 00 24 64 24 80 00 00 14 7c 80 00 00 24 64 24 
+80 00 00 14 84 80 02 00 24 64 24 80 00 00 14 6c 
+00 01 00 24 64 24 80 00 00 14 74 00 01 00 24 64 
+24 80 00 00 14 
+.fdata
+0a 00 02 00 01 00 02 00 03 00 04 00 05 00 05 00 
+00 00 01 00 02 00 03 00 

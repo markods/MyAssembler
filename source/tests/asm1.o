@@ -1,0 +1,25 @@
+.sections
+;name	type	size
+textsec	text	47
+bsssec	bss	2
+datasec	data	12
+.symbols
+;symbol	section	offset	type
+multiply		0	E
+textsec	textsec	0	S
+start	textsec	0	G
+bsssec	bsssec	0	S
+datasec	datasec	0	S
+.rel.textsec
+;symbol	offset	type
+multiply	    39	abs16
+textsec	    35	abs16
+bsssec	    44	abs16
+datasec	     2	abs16
+datasec	    12	abs16
+.textsec
+64 00 00 00 22 64 00 00 00 24 64 80 0a 00 26 6c 
+42 24 6c 00 02 00 22 74 00 01 00 26 8c 26 00 00 
+00 3c 00 0f 00 24 00 00 00 64 24 80 00 00 04 
+.datasec
+01 00 02 00 03 00 04 00 05 00 05 00 

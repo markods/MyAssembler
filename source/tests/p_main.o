@@ -1,0 +1,32 @@
+.sections
+;name	type	size
+textsec	text	50
+bsssec	bss	2
+.symbols
+;symbol	section	offset	type
+increase		0	E
+mularray		0	E
+multiply		0	E
+sumarray		0	E
+decrease		0	E
+int5_cnt		0	E
+start	textsec	0	G
+textsec	textsec	0	S
+divide		0	E
+bsssec	bsssec	0	S
+.rel.textsec
+;symbol	offset	type
+increase	    21	abs16
+mularray	    13	abs16
+multiply	    29	abs16
+sumarray	     9	abs16
+decrease	    25	abs16
+int5_cnt	     5	abs16
+int5_cnt	    41	abs16
+divide	    33	abs16
+bsssec	    47	abs16
+.textsec
+64 00 00 00 80 00 00 24 00 00 00 24 00 00 00 1c 
+00 05 00 24 00 00 00 24 00 00 00 24 00 00 00 24 
+00 00 00 1c 00 05 00 6c 80 00 00 24 64 24 80 00 
+00 04 

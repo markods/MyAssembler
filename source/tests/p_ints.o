@@ -1,0 +1,21 @@
+.sections
+;name	type	size
+ivt	data	16
+intdata	bss	2
+inthandlers	text	8
+.symbols
+;symbol	section	offset	type
+int5_cnt	intdata	0	G
+ivt	ivt	0	S
+intdata	intdata	0	S
+inthandlers	inthandlers	0	S
+.rel.inthandlers
+;symbol	offset	type
+int5_cnt	     5	abs16
+.rel.ivt
+;symbol	offset	type
+inthandlers	    10	abs16
+.inthandlers
+6c 00 01 00 80 00 00 0c 
+.ivt
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 

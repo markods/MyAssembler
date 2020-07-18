@@ -1,0 +1,16 @@
+.sections
+;name	type	size
+multext	text	6
+muldata	data	2
+.symbols
+;symbol	section	offset	type
+multiply	multext	0	G
+multext	multext	0	S
+muldata	muldata	0	S
+.rel.multext
+;symbol	offset	type
+muldata	     2	abs16
+.multext
+7c 80 00 00 24 14 
+.muldata
+0a 00 
